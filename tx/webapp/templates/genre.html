@@ -1,0 +1,537 @@
+{% extends'base.html' %}
+
+{% block title %}
+    genre
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block navbar %}
+<ul class="nav navbar-nav">
+							<li ><a href="{{ url_for('index') }}">Home</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle active" data-toggle="dropdown">Genre <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<li>
+									<div class="col-sm-4">
+										<ul class="multi-column-dropdown">
+											<li><a href="{{ url_for('genre',genre='action') }}">Action</a></li>
+											<li><a href="genre.html">Biography</a></li>
+											<li><a href="genre.html">Crime</a></li>
+											<li><a href="genre.html">Family</a></li>
+											<li><a href="{{ url_for('genre',genre='horror') }}">Horror</a></li>
+											<li><a href="genre.html">Romance</a></li>
+											<li><a href="genre.html">Sports</a></li>
+											<li><a href="genre.html">War</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<ul class="multi-column-dropdown">
+											<li><a href="genre.html">Adventure</a></li>
+											<li><a href="comedy.html">Comedy</a></li>
+											<li><a href="genre.html">Documentary</a></li>
+											<li><a href="genre.html">Fantasy</a></li>
+											<li><a href="genre.html">Thriller</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<ul class="multi-column-dropdown">
+											<li><a href="genre.html">Animation</a></li>
+											<li><a href="genre.html">Costume</a></li>
+											<li><a href="genre.html">Drama</a></li>
+											<li><a href="genre.html">History</a></li>
+											<li><a href="genre.html">Musical</a></li>
+											<li><a href="genre.html">Psychological</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+									</li>
+								</ul>
+							</li>
+
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Country <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<li>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="genre.html">Asia</a></li>
+												<li><a href="genre.html">France</a></li>
+												<li><a href="genre.html">Taiwan</a></li>
+												<li><a href="{{ url_for('country',country='US') }}">United States</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="genre.html">China</a></li>
+												<li><a href="genre.html">HongCong</a></li>
+												<li><a href="genre.html">Japan</a></li>
+												<li><a href="genre.html">Thailand</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="genre.html">Euro</a></li>
+												<li><a href="genre.html">India</a></li>
+												<li><a href="genre.html">Korea</a></li>
+												<li><a href="genre.html">United Kingdom</a></li>
+											</ul>
+										</div>
+
+									</li>
+								</ul>
+							</li>
+							<li><a href="{{ url_for('a_zlist') }}">A - z list</a></li>
+                                {% if user %}
+                            <li><a href="#"  data-toggle="modal" data-target="#myModal6" >{{ user.username }}</a></li>
+							<li><a href="{{ url_for('logout') }}"  >Logout</a></li>
+
+                                 {% else %}
+                            <li><a href="#"   data-toggle="modal" data-target="#myModal4">Login</a></li>
+							<li><a href="#"   data-toggle="modal" data-target="#myModal5">Register</a></li>
+                                {% endif %}
+						</ul>
+{% endblock %}
+
+{% block main %}
+<div class="w3_content_agilleinfo_inner">
+					<div class="agile_featured_movies">
+
+					<!--/tv-movies-->
+					<h3 class="agile_w3_title hor-t">Horror<span>Movies</span> </h3>
+					 <div class="wthree_agile-requested-movies tv-movies">
+										<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+															<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr1.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+																<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+															</a>
+                                            <div class="mid-1 agileits_w3layouts_mid_1_home">
+																	<div class="w3l-movie-text">
+																		<h6><a href="single.html">The Conjuring 2</a></h6>
+																	</div>
+																	<div class="mid-2 agile_mid_2_home">
+																		<p>2016</p>
+																		<div class="block-stars">
+																			<ul class="w3l-ratings">
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																			</ul>
+																		</div>
+																		<div class="clearfix"></div>
+																	</div>
+                                            </div>
+                                                                    <div class="ribben one">
+                                                                        <p>NEW</p>
+                                                                    </div>
+                                        </div>
+
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr2.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">The Forest</a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+											<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr3.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">The Purge</a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+												<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr4.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">Lights Out </a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+											<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr5.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">Rings	</a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+												<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+															<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr6.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+																<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+															</a>
+																<div class="mid-1 agileits_w3layouts_mid_1_home">
+																	<div class="w3l-movie-text">
+																		<h6><a href="single.html">Underworld</a></h6>
+																	</div>
+																	<div class="mid-2 agile_mid_2_home">
+																		<p>2016</p>
+																		<div class="block-stars">
+																			<ul class="w3l-ratings">
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																			</ul>
+																		</div>
+																		<div class="clearfix"></div>
+																	</div>
+																</div>
+															<div class="ribben one">
+																<p>NEW</p>
+															</div>
+													</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr7.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">Hush</a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+											<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr8.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">Viral</a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+												<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr9.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">Ouija </a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+											<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+											<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+												<a href="single.html" class="hvr-sweep-to-bottom"><img src="../static/images/hr10.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+												</a>
+												<div class="mid-1 agileits_w3layouts_mid_1_home">
+													<div class="w3l-movie-text">
+														<h6><a href="single.html">Don't Breathe</a></h6>
+													</div>
+													<div class="mid-2 agile_mid_2_home">
+														<p>2016</p>
+														<div class="block-stars">
+															<ul class="w3l-ratings">
+																<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+																				<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															</ul>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+												<div class="ribben one">
+													<p>NEW</p>
+												</div>
+											</div>
+												<div class="clearfix"></div>
+						</div>
+			<!--//tv-movies-->
+
+					  <div class="blog-pagenat-wthree">
+								<ul>
+									<li><a class="frist" href="#">Prev</a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+
+									<li><a class="last" href="#">Next</a></li>
+								</ul>
+
+								<!--//requested-movies-->
+
+				<!--//movies-->
+					</div>
+				</div>
+				</div>
+			<!--//content-inner-section-->
+
+	<div class="w3agile_footer_copy">
+				    <p>Copyright &copy; 2021.Group 6 All rights reserved.</p>
+			</div>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+<script src="../static/js/jquery-1.11.1.min.js"></script>
+	<!-- Dropdown-Menu-JavaScript -->
+			<script>
+				$(document).ready(function(){
+					$(".dropdown").hover(
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+							$(this).toggleClass('open');
+						},
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+							$(this).toggleClass('open');
+						}
+					);
+				});
+			</script>
+		<!-- //Dropdown-Menu-JavaScript -->
+
+
+<script type="text/javascript" src="../static/js/jquery.zoomslider.min.js"></script>
+		<!-- search-jQuery -->
+				<script src="../static/js/main.js"></script>
+			<script src="../static/js/simplePlayer.js"></script>
+			<script>
+				$("document").ready(function() {
+					$("#video").simplePlayer();
+				});
+			</script>
+			<script>
+				$("document").ready(function() {
+					$("#video1").simplePlayer();
+				});
+			</script>
+			<script>
+				$("document").ready(function() {
+					$("#video2").simplePlayer();
+				});
+			</script>
+				<script>
+				$("document").ready(function() {
+					$("#video3").simplePlayer();
+				});
+			</script>
+
+			<!-- pop-up-box -->
+		<script src="../static/js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<!--//pop-up-box -->
+
+			<div id="small-dialog1" class="mfp-hide">
+			<iframe src=""></iframe>
+	</div>
+	<div id="small-dialog2" class="mfp-hide">
+		<iframe src=""></iframe>
+	</div>
+	<script>
+		$(document).ready(function() {
+		$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+		});
+	</script>
+<script src="../static/js/easy-responsive-tabs.js"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<link href="../static/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+<script src="../static/js/owl.carousel.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#owl-demo").owlCarousel({
+
+		 autoPlay: 3000, //Set AutoPlay to 3 seconds
+		  autoPlay : true,
+		   navigation :true,
+
+		  items : 5,
+		  itemsDesktop : [640,4],
+		  itemsDesktopSmall : [414,3]
+
+		});
+
+	});
+</script>
+
+<!--/script-->
+<script type="text/javascript" src="../static/js/move-top.js"></script>
+<script type="text/javascript" src="../static/js/easing.js"></script>
+
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+ <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear'
+					 		};
+							*/
+
+							$().UItoTop({ easingType: 'easeOutQuart' });
+
+						});
+					</script>
+<!--end-smooth-scrolling-->
+	<script src="../static/js/bootstrap.js"></script>
+
+{% endblock %}

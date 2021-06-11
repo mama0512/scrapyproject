@@ -63,7 +63,9 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'tencentmv.pipelines.TencentmvPipeline': 300,
+   'tencentmv.pipelines.TencentmvPipeline': 300, #保存到文件中
+    # 'Tencentmv.pipelines.TencentmvScrapyPipeline': 300,#保存到mysql数据库
+
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -86,3 +88,12 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+#Mysql数据库的配置信息
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'booking'         #数据库名字，请修改
+MYSQL_USER = 'root'             #数据库账号，请修改
+MYSQL_PASSWORD = 'malizhi123.'         #数据库密码，请修改
+
+MYSQL_PORT = 3306               #数据库端口，在dbhelper中使用
+
+
