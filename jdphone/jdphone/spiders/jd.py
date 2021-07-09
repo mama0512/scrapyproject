@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from ..items import JdphoneItem
-import sys
-
-reload(sys)
-sys.setdefaultencoding("utf-8")
+# import sys
+#
+# reload(sys)
+# sys.setdefaultencoding("utf-8")
 
 
 class JdSpider(scrapy.Spider):
@@ -30,7 +30,8 @@ class JdSpider(scrapy.Spider):
 
             title = li.xpath('div/div/a/em/text()').extract()  # 标题
             price = li.xpath('div/div/strong/i/text()').extract()  # 价格
-            comment_num = li.xpath('div/div/strong/a/text()').extract()  # 评价条数
+            comment_num = li.xpath('div/div/strong/a/text()').get()  # 评价条数
+            print(comment_num)
             id = li.xpath('@data-pid').extract()  # id
             ids.append(''.join(id))
 
